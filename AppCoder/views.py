@@ -95,8 +95,8 @@ def buscar(req: HttpRequest):
 
     if req.GET["camada"]:
             camada = req.GET["camada"]
-            curso =  Curso.objects.get(camada=camada)       
-            return render(req, "resultadosBusqueda.html", {"curso" : curso })
+            cursos =  Curso.objects.filter(camada__icontains=camada)       
+            return render(req, "resultadosBusqueda.html", {"cursos" : cursos })
     else:
       return HttpResponse(f"Debe agregar una camada")
     

@@ -4,6 +4,16 @@
 
     <p>Resultados de la busqueda del curso </p>
 
-    {{curso}}
+    {% if cursos %}
+        <ul>
+            {% for curso in cursos %}
+              <li>{{curso}}</li>
+            {% endfor %}
+
+        </ul>
+
+   
+
+    {% endif %}
 
 {% endblock contenidoQueCambia %} 
