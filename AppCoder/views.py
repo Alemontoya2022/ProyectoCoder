@@ -38,3 +38,8 @@ def estudiantes(req):
 def entragables(req):
 
     return render(req, "entregables.html")
+
+def cursoFormulario(req):
+    
+    return render(req, "cursoFormulario.html")
+
